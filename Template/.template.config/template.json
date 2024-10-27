@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Arman Espiar",
+  "classifications": ["Web", "Solution"],
+  "name": "MicroDomainFlowTemplate",
+  "shortName": "mdf",
+  "defaultName": "MicroAppService",
+  "identity": "ArmanEspiar.MicroService.DDD.Template",
+  "tags": {
+    "language": "C#",
+    "type": "solution",
+    "editorTreatAs": "solution"
+  },
+  "sourceName": "ContentService",
+  "preferNameDirectory": true,
+  "guids": [
+    "F90B4F92-01BC-49EF-BCA5-E8A719C6FF92",
+    "9959CC5D-28DB-4BB1-8EF9-A6DD7E0B1D50",
+    "F61CE1C7-75FF-4F9B-AE9E-FE278032F2F8",
+    "21C589EC-2F92-4501-B1BA-158BF2BEF45E",
+    "FEF62AAD-FE6C-48FA-AA36-31578129279B",
+    "57A93468-8FBE-40FC-B0AC-486B13F227AF",
+    "474223D4-5A4D-4B49-9AC2-C84A20E9F527",
+    "E5CFD401-E56D-45ED-BC73-7E125696E76A",
+    "0E81530F-FEDD-48CF-A947-8E28C8FF8143",
+    "D12D1DA9-ECF3-46A4-A7E8-FF0CB005FFAF",
+    "E57EC4F1-3E75-4CAE-AA71-08A33C780B9E"
+  ],
+  "symbols": {
+    "CommandDbContextName": {
+      "type": "parameter",
+      "description": "Name of the Command DbContext",
+      "replaces": "ContentServiceCommandDbContext",
+      "defaultValue": "CommandDbContext",
+      "fileRename": "ContentServiceCommandDbContext",
+      "displayName": "The name of Command Database Context"
+    },
+    "QueryDbContextName": {
+      "type": "parameter",
+      "description": "Name of the Query DbContext",
+      "replaces": "ContentServiceQueryDbContext",
+      "defaultValue": "QueryDbContext",
+      "fileRename": "ContentServiceQueryDbContext",
+      "displayName": "The name of Query Database Context"
+    },
+    "IncludeExample": {
+      "type": "parameter",
+      "description": "Include example files in the project",
+      "datatype": "bool",
+      "defaultValue": true,
+      "displayName": "Include usage examples?"
+    },
+    "ThisProjectIsAspireNet": {
+      "type": "parameter",
+      "description": "Checked if you are using this project in aspire.net project.",
+      "datatype": "bool",
+      "defaultValue": false,
+      "displayName": "Do you use this project in aspire.net?"
+    }
+  },
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "modifiers": [
+        {
+          "condition": "true",
+          "exclude": [
+            "**/.git/**/*",
+            "**/.github/**/*",
+            "**/.template.config/**/*",
+            "**/.vs/**/*",
+            "**/.gitattributes",
+            "**/.gitignore",
+            "**/LICENSE.txt",
+            "**/README.md"
+          ]
+        },
+        {
+          "condition": "(IncludeExample == false)",
+          "exclude": [
+            "**/ContentService.Core.ApplicationService/Aggregates/**/*",
+            "**/ContentService.Core.Contracts/Aggregates/**/*",
+            "**/ContentService.Core.Domain/Aggregates/**/*",
+            "**/EventBus.Messages/Aggregates/**/*",
+            "**/ContentService.Infrastructure.Persistence.Sql.Commands/Aggregates/**/*",
+            "**/ContentService.Infrastructure.Persistence.Sql.Queries/Aggregates/**/*",
+            "**/ContentService.Infrastructure.Persistence.Sql.Queries/ProfilesQuery/**/*",
+            "**/ContentService.Endpoints.API/Controllers/**/*",
+            "**/ContentService.Endpoints.API/ViewModels/**/*",
+            "**/ContentService.Endpoints.API/ProfilesViewModel/**/*",
+            "**/ContentService.Core.ApplicationService.Tests.Unit/Aggregates/**/*",
+            "**/ContentService.Core.Domain.Tests.Unit/Aggregates/**/*",
+            "**/ContentService.Core.Domain.Tests.Unit/SharedKernel/**/*",
+            "**/ContentService.Endpoints.API.Tests.Unit/Controllers/**/*"
+          ]
+        }
+      ],
+      "replacements": {
+        "ContentService.Core.ApplicationService": "ApplicationService",
+        "ContentService.Core.Contracts": "Contracts",
+        "ContentService.Core.Domain": "Domain",
+        "EventBus.Messages": "EventBus",
+        "ContentService.Infrastructure.Persistence.Sql.Commands": "Commands",
+        "ContentService.Infrastructure.Persistence.Sql.Queries": "Queries",
+        "ContentService.Endpoints.API": "API",
+        "ContentService.Core.ApplicationService.Tests.Unit": "ApplicationService.Tests.Unit",
+        "ContentService.Core.Domain.Tests.Unit": "Domain.Tests.Unit",
+        "ContentService.Endpoints.API.Tests.Unit": "API.Tests.Unit"
+      }
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "ContentService.App.sln"
+    }
+  ]
+}

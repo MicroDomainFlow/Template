@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Aggregates\Categories\Entities\" />
+    <Folder Include="SharedKernel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.10.0" />
+    <PackageReference Include="MicroDomainFlow.BaseResources" Version="0.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContentService.Resources\ContentService.Resources.csproj" />
+    <ProjectReference Include="..\EventBus.Messages\EventBus.Messages.csproj" />
+  </ItemGroup>
+</Project>
