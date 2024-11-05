@@ -4,11 +4,9 @@
     <id>MicroDomainFlowTemplate</id>
     <version>0.0.1</version>
     <authors>Arman Espiar</authors>
-    <owners>Arman Espiar</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>MicroDomainFlowTemplate for Visual Studio</description>
-    <tags>template</tags>
     <license type="expression">MIT</license>
+    <description>Project template for MDF framework.</description>
+    <tags>template</tags>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>

@@ -9,6 +9,7 @@ public sealed class CategoryParentAddedEventHandler : IDomainEventHandler<Catego
 {
 	public Task Consume(ConsumeContext<CategoryParentAddedEvent> context)
 	{
+		//Handler Code here
 		Console.OutputEncoding = System.Text.Encoding.UTF8; // Set the console output encoding to UTF-8
 		Console.ForegroundColor = ConsoleColor.Blue;
 		Console.WriteLine(context.Message);
