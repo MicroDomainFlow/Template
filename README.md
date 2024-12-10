@@ -1,5 +1,5 @@
 # از این نسخه استفاده کنید
-[ ریپوزیتوری جدید](https://https://github.com/MicroDomainFlow/ProjectTemplate "ریپوزیتوری جدید")
+[ ریپوزیتوری جدید](https://github.com/MicroDomainFlow/ProjectTemplate "ریپوزیتوری جدید")
 
 
 # دانلود فریمورک برای ویژوال استودیو 2022:
